@@ -39,7 +39,9 @@ public class DateCalculation implements HumanReadableTimestamp {
                 || hours % 10 == 9 || hours % 10 == 0) {
                 return "Опубликовано " + hours + " часов назад";
             }
-        } else if (seconds >= 86_400) {
+        } else if (seconds < 172_800) {
+            return "Опубликовано вчера";
+        } else {
             if (days % 100 == 11 || days % 100 == 12 || days % 100 == 13 || days % 100 == 14
                 || days % 100 == 15 || days % 100 == 16 || days % 100 == 17 || days % 100 == 18
                 || days % 100 == 19) {
