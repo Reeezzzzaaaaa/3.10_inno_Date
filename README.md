@@ -1,8 +1,11 @@
 Дан timestamp (отметка времени) публикации поста в социальной сети.
+
 LocalDate publishDate = LocalDate.now().minusDays(1);
 LocalTime publishTime = LocalTime.now().minusHours(5);
 LocalDateTime timestamp = LocalDateTime.of(publishDate, publishTime);
+
 Изучите класс Duration
+
 Реализуйте интерфейс HumanReadableTimestamp ссылка. Напишите функцию,
 которая принимает на вход отметку времени, а возвращает строку вида:
 опубликовано X Y назад, где X - рассчитанный период, а Y – единица времени
